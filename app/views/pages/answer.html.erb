@@ -1,0 +1,20 @@
+<h1>Studid Coaching</h1>
+
+<div class="you">
+  <p><%= params[:question] %></p>
+  <p><i>- You</i></p>
+</div>
+
+<div class="coach">
+  <% if params[:question] == "I am going to work"%>
+    <p>Great!</p>
+  <% elsif params[:question].include? "?"%>
+    <p>Silly question, get dressed and go to work!</p>
+  <% else%>
+    <p>I don't care, get dressed and go to work!</p>
+    <% end%>
+  <p><i>- Your coach</i></p>
+</div>
+
+
+<%= link_to "Ask a new question", ask_path %>
